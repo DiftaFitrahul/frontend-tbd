@@ -21,7 +21,7 @@ export default function DetailBook(){
         <main className="grid place-items-center min-h-screen">
             <div className="bg-white rounded-lg shadow-md p-12 mb-4">
              <button onClick={() =>{
-                router.replace('/')
+                router.push('/')
              }} className="text-black pb-10 text-xl">Back</button>   
             <div className="flex justify-between">
                 <div className="text-black text-6xl font-semibold">{book.title}</div>
@@ -40,12 +40,12 @@ export default function DetailBook(){
             <p className="text-black text-3xl py-4">ONLY {book.book_price}</p>
             <div className="flex justify-end ">
                 <button onClick={() => {
-                    router.replace(`/update_book/${book_id}`)
+                    router.push(`/update_book/${book_id}`)
                 }} className="bg-green-500 p-4 rounded-md mx-5">update</button>
                 <button onClick={() => {
                     axios.delete(`https://embarrassed-leotard-fly.cyclic.app/book/${book_id}`)
                     .then((result) => {
-                        router.replace('/')
+                        router.push('/')
                     }).catch((err) => {
                         console.log(err)
                     })

@@ -48,7 +48,7 @@ export default function Home() {
         })
       }
       <button onClick={() =>{
-        router.replace('/create_book/createBook')
+        router.push('/create_book/createBook')
       }} className="fixed bottom-20 right-20 text-white text-[30px] bg-blue-600 w-[60px] h-[60px] grid place-items-center rounded-full aspect-square">+</button>
     </div>
   );

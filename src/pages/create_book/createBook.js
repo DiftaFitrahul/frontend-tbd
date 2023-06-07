@@ -156,14 +156,14 @@ export default function CreateBook() {
                 () => {
                     console.log(createBook)
                     axios.post(`https://embarrassed-leotard-fly.cyclic.app/book`, createBook).then(() => {
-                        router.replace('/')
+                        router.push('/')
                     }).catch((err) => {
                         alert(err)
                     })
                 }
             } className="bg-green-500 p-4 rounded-md mx-5">Save</button>
             <button onClick={()=>{
-                router.replace(`/`)
+                router.push(`/`)
             }} className="bg-red-500 p-4 rounded-md mr-10">Cancel</button>
         </div>
             

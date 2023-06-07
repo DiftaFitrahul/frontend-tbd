@@ -156,14 +156,14 @@ export default function UpdateBook() {
                 () => {
                     console.log(updateBook)
                     axios.put(`https://embarrassed-leotard-fly.cyclic.app/book/${update_book_id}`, updateBook).then(() => {
-                        router.replace('/')
+                        router.push('/')
                     }).catch((err) => {
                         alert(err)
                     })
                 }
             } className="bg-green-500 p-4 rounded-md mx-5">Save</button>
             <button onClick={()=>{
-                router.replace(`/${update_book_id}`)
+                router.push(`/${update_book_id}`)
             }} className="bg-red-500 p-4 rounded-md mr-10">Cancel</button>
         </div>
             
